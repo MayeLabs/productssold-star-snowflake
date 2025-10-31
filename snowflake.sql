@@ -57,3 +57,9 @@ CREATE TABLE dim_store(
     store_name VARCHAR(100),
     FOREIGN KEY (region_id) REFERENCES dim_region(region_id)
 );
+
+-- Dimension table: dim_category
+CREATE TABLE dim_category(
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(100)
+);
