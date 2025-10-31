@@ -16,3 +16,9 @@ CREATE TABLE dim_customer(
     location VARCHAR(100)
 );
 
+-- Dimension table: dim_sales_person
+CREATE TABLE dim_sales_person(
+    sales_person_id INT PRIMARY KEY,
+    salesperson_name VARCHAR(100),
+    level INT
+);
