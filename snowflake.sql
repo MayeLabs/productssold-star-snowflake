@@ -27,3 +27,12 @@ CREATE TABLE dim_location(
     city VARCHAR(100)
 );
 
+-- Dimension table dim_customer
+CREATE TABLE dim_customer(
+    customer_id INT PRIMARY KEY,
+    transaction_id INT,
+    location_id INT,
+    customer_name VARCHAR(100)
+    FOREIGN KEY (transaction_id) REFERENCES dim_transaction(transaction_id),
+    FOREIGN KEY (location_id) REFERENCES dim_location(location_id)
+);
