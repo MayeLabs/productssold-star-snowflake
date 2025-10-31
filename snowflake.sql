@@ -80,3 +80,20 @@ CREATE TABLE dim_product(
     FOREIGN KEY (category_id) REFERENCES dim_category(category_id),
     FOREIGN KEY (manufacturer_id) REFERENCES dim_manufacturer(manufacturer_id)
 );
+
+-- Fact table: fact_sales
+CREATE TABLE fact_sales(
+    sales_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    date_id INT,
+    customer_id INT,
+    units_sold INT,
+    sales_amount DECIMAL(10,2),
+    salesperson_id INT, 
+    store_id INT
+    FOREIGN KEY (product_id) REFERENCES dim_product(product_id),
+    FOREIGN KEY (date_id) REFERENCES dim_date(date_id),
+    FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id),
+    FOREIGN KEY (salesperson_id) REFERENCES dim_sales_person(salesperson_id),
+    FOREIGN KEY (store_id) REFERENCES dim_store(store_id)
+);
