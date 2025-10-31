@@ -27,7 +27,7 @@ CREATE TABLE dim_location(
     city VARCHAR(100)
 );
 
--- Dimension table dim_customer
+-- Dimension table: dim_customer
 CREATE TABLE dim_customer(
     customer_id INT PRIMARY KEY,
     transaction_id INT,
@@ -37,9 +37,15 @@ CREATE TABLE dim_customer(
     FOREIGN KEY (location_id) REFERENCES dim_location(location_id)
 );
 
--- Dimension table dim_sales_person
+-- Dimension table: dim_sales_person
 CREATE TABLE dim_sales_person(
     salesperson_id INT PRIMARY KEY,
     salesperson_name VARCHAR(100),
     level INT
+);
+
+-- Dimension table: dim_region
+CREATE TABLE dim_region(
+    region_id INT AUTO_INCREMENT PRIMARY KEY,
+    region_name VARCHAR(100)
 );
