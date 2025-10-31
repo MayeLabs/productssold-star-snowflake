@@ -36,3 +36,10 @@ CREATE TABLE dim_customer(
     FOREIGN KEY (transaction_id) REFERENCES dim_transaction(transaction_id),
     FOREIGN KEY (location_id) REFERENCES dim_location(location_id)
 );
+
+-- Dimension table dim_sales_person
+CREATE TABLE dim_sales_person(
+    salesperson_id INT PRIMARY KEY,
+    salesperson_name VARCHAR(100),
+    level INT
+);
