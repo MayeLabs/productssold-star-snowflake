@@ -11,3 +11,10 @@ CREATE TABLE dim_date(
     month INT,
     year INT
 );
+
+-- Dimension table: dim_transaction
+CREATE TABLE dim_transaction(
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    transaction_amount DECIMAL(10,2),
+    payment_method ENUM('Credito', 'Efectivo', 'Transferencia', 'Bizum')
+);
