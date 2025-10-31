@@ -18,3 +18,12 @@ CREATE TABLE dim_transaction(
     transaction_amount DECIMAL(10,2),
     payment_method ENUM('Credito', 'Efectivo', 'Transferencia', 'Bizum')
 );
+
+-- Dimension table: dim_location
+CREATE TABLE dim_location(
+    location_id INT AUTO_INCREMENT PRIMARY KEY,
+    country VARCHAR(100),
+    state VARCHAR(100),
+    city VARCHAR(100)
+);
+
