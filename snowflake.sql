@@ -63,3 +63,9 @@ CREATE TABLE dim_category(
     category_id INT AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(100)
 );
+
+-- Dimension table: dim_manufacturer
+CREATE TABLE dim_manufacturer(
+    manufacturer_id INT AUTO_INCREMENT PRIMARY KEY,
+    manufacturer_name VARCHAR(100)
+);
