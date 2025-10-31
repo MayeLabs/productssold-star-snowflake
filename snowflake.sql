@@ -69,3 +69,14 @@ CREATE TABLE dim_manufacturer(
     manufacturer_id INT AUTO_INCREMENT PRIMARY KEY,
     manufacturer_name VARCHAR(100)
 );
+
+-- Dimension table: dim_product
+CREATE TABLE dim_product(
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT,
+    manufacturer_id INT,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    FOREIGN KEY (category_id) REFERENCES dim_category(category_id),
+    FOREIGN KEY (manufacturer_id) REFERENCES dim_manufacturer(manufacturer_id)
+);
