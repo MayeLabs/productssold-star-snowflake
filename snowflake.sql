@@ -49,3 +49,11 @@ CREATE TABLE dim_region(
     region_id INT AUTO_INCREMENT PRIMARY KEY,
     region_name VARCHAR(100)
 );
+
+-- Dimension table: dim_store
+CREATE TABLE dim_store(
+    store_id INT AUTO_INCREMENT PRIMARY KEY,
+    region_id INT,
+    store_name VARCHAR(100),
+    FOREIGN KEY (region_id) REFERENCES dim_region(region_id)
+);
