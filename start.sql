@@ -18,7 +18,7 @@ CREATE TABLE dim_customer(
 
 -- Dimension table: dim_sales_person
 CREATE TABLE dim_sales_person(
-    sales_person_id INT PRIMARY KEY,
+    salesperson_id INT PRIMARY KEY,
     salesperson_name VARCHAR(100),
     level INT
 );
