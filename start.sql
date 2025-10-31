@@ -22,3 +22,18 @@ CREATE TABLE dim_sales_person(
     salesperson_name VARCHAR(100),
     level INT
 );
+
+-- Dimension table: dim_store
+CREATE TABLE dim_store(
+    store_id INT PRIMARY KEY,
+    store_name VARCHAR(100),
+    region VARCHAR(65)
+);
+
+-- Dimension table: dim_product
+CREATE TABLE dim_product(
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2)
+);
