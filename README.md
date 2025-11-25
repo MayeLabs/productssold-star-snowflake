@@ -70,6 +70,11 @@ Ambos representan la misma lógica de negocio, pero la forma en que se organizan
 
 La idea de tener ambas versiones es comparar cómo cambia el diseño, la normalización y la complejidad de las consultas según el tipo de esquema.
 
+## How to run the project / Cómo ejecutar el proyecto
 
+```bash
+mysql -u root -p < start.sql
+mysql -u root -p < snowflake.sql
+```
 
-
+  ![Img of result](once_excecuted.jpg)
