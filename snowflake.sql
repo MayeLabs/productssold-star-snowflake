@@ -1,5 +1,6 @@
 /*** Products sold model snowflake ***/
-
+CREATE DATABASE IF NOT EXISTS products_sold_snowflake_db;
+USE products_sold_snowflake_db;
 
 -- Dimension table: dim_date
 CREATE TABLE dim_date(
@@ -90,10 +91,11 @@ CREATE TABLE fact_sales(
     units_sold INT,
     sales_amount DECIMAL(10,2),
     salesperson_id INT, 
-    store_id INT
+    store_id INT,
     FOREIGN KEY (product_id) REFERENCES dim_product(product_id),
     FOREIGN KEY (date_id) REFERENCES dim_date(date_id),
     FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id),
     FOREIGN KEY (salesperson_id) REFERENCES dim_sales_person(salesperson_id),
     FOREIGN KEY (store_id) REFERENCES dim_store(store_id)
 );
+

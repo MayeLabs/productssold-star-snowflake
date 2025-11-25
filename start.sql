@@ -1,5 +1,6 @@
 /*** Products sold model start ***/
-
+CREATE DATABASE IF NOT EXISTS products_sold_start_db;
+USE products_sold_start_db;
 
 -- Dimension table: dim_date
 CREATE TABLE dim_date (
