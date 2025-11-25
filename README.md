@@ -1,6 +1,8 @@
-![Progress]
-![Personal Project](https://img.shields.io/badge/TYPE-PERSONAL%20PROJECT-blue)
 # Products sold Schema Star and Snowflake
+
+![Finished](https://img.shields.io/badge/STATUS-FINISHED-green)
+![Personal Project](https://img.shields.io/badge/TYPE-PERSONAL%20PROJECT-blue)
+
 
 This project is about design and the implementation using SQL od product sold, where a customer buy a product that is sol to sales person.
 
